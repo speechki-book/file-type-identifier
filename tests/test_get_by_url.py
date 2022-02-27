@@ -1,5 +1,5 @@
-from fti.file_type_getters.get_by_url import get_file_types_by_url
-from fti.file_types import FileTypes
+from fti import FileTypes
+from fti.file_type_getters import get_file_types_by_url
 
 
 def test_get_file_types_by_url():

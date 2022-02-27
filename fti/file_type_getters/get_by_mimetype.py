@@ -85,8 +85,10 @@ def _check_mime_file_type(mime: str, file_type: FileTypes) -> bool:
 def get_file_types_by_mime(mime: str) -> set[FileTypes]:
     result = set()
 
-    for file_type in FILE_MIMES:
-        if _check_mime_file_type(mime, file_type):
-            result.add(file_type)
+    for part in mime.split(" "):
+        t_part = part.replace(";", "")
+        for file_type in FILE_MIMES:
+            if _check_mime_file_type(t_part, file_type):
+                result.add(file_type)
 
     return result

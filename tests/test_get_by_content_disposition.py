@@ -1,5 +1,5 @@
-from fti.file_type_getters.get_by_content_disposition import get_file_types_by_content_disposition
-from fti.file_types import FileTypes
+from fti import FileTypes
+from fti.file_type_getters import get_file_types_by_content_disposition
 
 
 def test_get_file_types_by_content_disposition():

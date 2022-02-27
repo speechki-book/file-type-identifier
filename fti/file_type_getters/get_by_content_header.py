@@ -176,7 +176,7 @@ def _check_template(input_bytes: bytes, template: str) -> bool:
     return True
 
 
-def check_content_file_type(input_bytes: bytes, file_type: FileTypes) -> bool:
+def _check_content_file_type(input_bytes: bytes, file_type: FileTypes) -> bool:
     for template in FILE_HEADERS[file_type]:
         if _check_template(input_bytes, template):
             return True
@@ -188,7 +188,7 @@ def get_file_types_by_content(input_bytes: bytes) -> set[FileTypes]:
     result = set()
 
     for file_type in FILE_HEADERS:
-        if check_content_file_type(input_bytes, file_type):
+        if _check_content_file_type(input_bytes, file_type):
             result.add(file_type)
 
     return result

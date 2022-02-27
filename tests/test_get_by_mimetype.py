@@ -1,5 +1,5 @@
-from fti.file_type_getters.get_by_mimetype import get_file_types_by_mime
-from fti.file_types import FileTypes
+from fti import FileTypes
+from fti.file_type_getters import get_file_types_by_mime
 
 
 def test_get_file_types_by_mime():
