@@ -32,6 +32,7 @@ FILE_MIMES: dict[FileTypes, set[str]] = {
     FileTypes.JAR: {"application/java-archive"},
     FileTypes.JPEG: {"image/jpeg"},
     FileTypes.JPG: {"image/jpeg"},
+    FileTypes.JSON: {"application/json"},
     FileTypes.MID: {"audio/midi"},
     FileTypes.MIDI: {"audio/midi"},
     FileTypes.MK3D: {"video/x-matroska"},

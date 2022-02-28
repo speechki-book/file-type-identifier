@@ -61,6 +61,7 @@ class FileTypes(Enum):
     JAR = "jar"
     JPEG = "jpeg"
     JPG = "jpg"
+    JSON = "json"
     LBM = "lbm"
     LEP = "lep"
     LZ = "lz"
