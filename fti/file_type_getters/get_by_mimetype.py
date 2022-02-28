@@ -16,6 +16,7 @@ FILE_MIMES: dict[FileTypes, set[str]] = {
     FileTypes.BZ2: {"application/x-bzip2"},
     FileTypes.CAB: {"application/vnd.ms-cab-compressed"},
     FileTypes.CLASS: {"application/java-vm"},
+    FileTypes.CSS: {"text/css"},
     FileTypes.DEB: {"application/x-debian-package"},
     FileTypes.DER: {"application/x-x509-ca-cert"},
     FileTypes.DJV: {"image/vnd.djvu"},

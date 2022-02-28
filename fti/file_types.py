@@ -27,6 +27,7 @@ class FileTypes(Enum):
     CMUS = "cmus"
     CR2 = "cr2"
     CRX = "crx"
+    CSS = "css"
     CWK = "cwk"
     DAT = "dat"
     DBA = "dba"
