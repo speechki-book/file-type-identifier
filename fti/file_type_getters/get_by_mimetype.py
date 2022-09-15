@@ -73,6 +73,9 @@ FILE_MIMES: dict[FileTypes, set[str]] = {
     FileTypes.XLSX: {"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
     FileTypes.XML: {"application/xml"},
     FileTypes.ZIP: {"application/zip"},
+    FileTypes.EPUB: {"application/epub+zip"},
+    FileTypes.FB2: {"application/fb2"},
+    FileTypes.RTF: {"text/rtf", "application/rtf"},
 }
 
 

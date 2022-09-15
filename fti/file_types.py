@@ -129,3 +129,6 @@ class FileTypes(Enum):
     YUVN = "yuvn"
     Z = "z"
     ZIP = "zip"
+    EPUB = "epub"
+    FB2 = "fb2"
+    RTF = "rtf"

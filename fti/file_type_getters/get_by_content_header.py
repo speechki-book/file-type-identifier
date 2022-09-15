@@ -157,6 +157,9 @@ FILE_HEADERS: dict[FileTypes, set[str]] = {
     FileTypes.YUVN: {"46 4F 52 4D nn nn nn nn 59 55 56 4E"},
     FileTypes.Z: {"1F A0", "1F 9D"},
     FileTypes.ZIP: {"50 4B 03 04", "50 4B 05 06", "50 4B 07 08"},
+    FileTypes.EPUB: {"50 4B 03 04", "50 4B 05 06", "50 4B 07 08"},
+    FileTypes.FB2: {"3c 3f 78 6d 6c 20"},
+    FileTypes.RTF: {"7b 5c 72 74 66"},
 }
 
 
