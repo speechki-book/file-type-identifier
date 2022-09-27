@@ -27,8 +27,12 @@ def get_file_types(url: str) -> set[FileTypes]:
 
             if result := get_file_types_by_content(content):
                 return result
-    except httpx.UnsupportedProtocol:
+    except (httpx.UnsupportedProtocol, httpx.ConnectError):
         raise ValueError("Wrong url!")
+    except httpx.TimeoutException:
+        raise ValueError("Timeout error!")
+    except httpx.RequestError:
+        raise ValueError("Unexpected error!")
 
     return set()
 
@@ -52,8 +56,12 @@ async def get_file_types_async(url: str) -> set[FileTypes]:
 
             if result := get_file_types_by_content(content):
                 return result
-    except httpx.UnsupportedProtocol:
+    except (httpx.UnsupportedProtocol, httpx.ConnectError):
         raise ValueError("Wrong url!")
+    except httpx.TimeoutException:
+        raise ValueError("Timeout error!")
+    except httpx.RequestError:
+        raise ValueError("Unexpected error!")
     finally:
         await client.aclose()
 
