@@ -199,7 +199,7 @@ testing = ["coverage (>=6.2)", "hypothesis (>=5.7.1)", "flaky (>=3.5.0)", "mypy 
 
 [[package]]
 name = "pytest-cov"
-version = "3.0.0"
+version = "4.0.0"
 description = "Pytest plugin for measuring coverage."
 category = "dev"
 optional = false
@@ -210,7 +210,7 @@ coverage = {version = ">=5.2.1", extras = ["toml"]}
 pytest = ">=4.6"
 
 [package.extras]
-testing = ["virtualenv", "pytest-xdist", "six", "process-tests", "hunter", "fields"]
+testing = ["fields", "hunter", "process-tests", "six", "pytest-xdist", "virtualenv"]
 
 [[package]]
 name = "rfc3986"
@@ -245,7 +245,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "5e5b5b2f34f04099d5d6f0d0ac7ea2da20bbcec6e9d9b21204a50b29b06840b8"
+content-hash = "02e2f30854b85453d671cd1fbd12c4ea4c8c8174c0728ed5e93644be3217b068"
 
 [metadata.files]
 anyio = []

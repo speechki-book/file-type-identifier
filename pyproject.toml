@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "file-type-identifier"
-version = "0.2.1"
+version = "0.2.2"
 description = "Library for identifying file type"
 authors = ["Kurbanov Bulat <b.kurbanov@speechki.org>", "Pavel Maltsev <zeden123@gmail.com>"]
 readme = "README.md"
@@ -20,7 +20,7 @@ httpx = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1"
-pytest-cov = "^3.0.0"
+pytest-cov = "^4.0.0"
 pytest-asyncio = "^0.19"
 
 [build-system]

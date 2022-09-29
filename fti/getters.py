@@ -9,12 +9,12 @@ from .file_type_getters import (
 )
 
 
-def get_file_types(url: str) -> set[FileTypes]:
+def get_file_types(url: str, timeout: float = 5) -> set[FileTypes]:
     if result := get_file_types_by_url(url):
         return result
 
     try:
-        with httpx.stream("GET", url, follow_redirects=True) as response:
+        with httpx.stream("GET", url, follow_redirects=True, timeout=httpx.Timeout(timeout)) as response:
             content_disposition = response.headers.get("content-disposition")
             if content_disposition and (result := get_file_types_by_content_disposition(content_disposition)):
                 return result
@@ -37,11 +37,11 @@ def get_file_types(url: str) -> set[FileTypes]:
     return set()
 
 
-async def get_file_types_async(url: str) -> set[FileTypes]:
+async def get_file_types_async(url: str, timeout: float = 5) -> set[FileTypes]:
     if result := get_file_types_by_url(url):
         return result
 
-    client = httpx.AsyncClient()
+    client = httpx.AsyncClient(timeout=httpx.Timeout(timeout))
     try:
         async with client.stream("GET", url, follow_redirects=True) as response:
             content_disposition = response.headers.get("content-disposition")
