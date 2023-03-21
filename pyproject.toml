@@ -19,7 +19,7 @@ python = "^3.9"
 httpx = "*"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.1"
+pytest = "^7.2"
 pytest-cov = "^4.0.0"
 pytest-asyncio = "^0.19"
 
