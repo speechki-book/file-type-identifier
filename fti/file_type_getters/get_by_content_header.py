@@ -160,6 +160,8 @@ FILE_HEADERS: dict[FileTypes, set[str]] = {
     FileTypes.EPUB: {"50 4B 03 04", "50 4B 05 06", "50 4B 07 08"},
     FileTypes.FB2: {"3c 3f 78 6d 6c 20"},
     FileTypes.RTF: {"7b 5c 72 74 66"},
+    FileTypes.M4A: {"nn nn nn nn 66 74 79 70 4D 34 41 20"},
+    FileTypes.MOV: {"nn nn nn nn 66 74 79 70 71 74 20 20"},
 }
 
 

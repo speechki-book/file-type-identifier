@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "file-type-identifier"
-version = "0.2.3"
+version = "0.2.4"
 description = "Library for identifying file type"
 authors = ["Kurbanov Bulat <b.kurbanov@speechki.org>", "Pavel Maltsev <zeden123@gmail.com>"]
 readme = "README.md"

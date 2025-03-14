@@ -132,3 +132,5 @@ class FileTypes(Enum):
     EPUB = "epub"
     FB2 = "fb2"
     RTF = "rtf"
+    M4A = "m4a"
+    MOV = "mov"

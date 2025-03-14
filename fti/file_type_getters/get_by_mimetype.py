@@ -76,6 +76,8 @@ FILE_MIMES: dict[FileTypes, set[str]] = {
     FileTypes.EPUB: {"application/epub+zip"},
     FileTypes.FB2: {"application/fb2"},
     FileTypes.RTF: {"text/rtf", "application/rtf"},
+    FileTypes.M4A: {"audio/mp4"},
+    FileTypes.MOV: {"video/quicktime"}
 }
 
 
