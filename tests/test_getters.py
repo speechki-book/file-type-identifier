@@ -146,7 +146,7 @@ async def test_async_get_file_types_by_content_disposition():
 
     by_url_mock = MagicMock(return_value=set())
 
-    httpx_client_mock = MagicMock()
+    httpx_client_mock = MagicMock(return_value=MagicMock(aclose=AsyncMock()))
 
     expected_result = {FileTypes._3G2}
     by_content_disposition_mock = MagicMock(return_value=expected_result)
@@ -166,7 +166,7 @@ async def test_async_get_file_types_by_content_type():
 
     by_url_mock = MagicMock(return_value=set())
 
-    httpx_client_mock = MagicMock()
+    httpx_client_mock = MagicMock(return_value=MagicMock(aclose=AsyncMock()))
 
     by_content_disposition_mock = MagicMock(return_value=set())
 
@@ -193,7 +193,7 @@ async def test_async_get_file_type_by_content():
     response_mock = MagicMock()
     stream_mock = MagicMock()
     stream_mock.__aenter__ = AsyncMock(return_value=response_mock)
-    client_stream_mock = MagicMock()
+    client_stream_mock = MagicMock(aclose=AsyncMock())
     client_stream_mock.stream = MagicMock(return_value=stream_mock)
     httpx_client_mock = MagicMock(return_value=client_stream_mock)
 
@@ -226,7 +226,7 @@ async def test_async_get_file_type_no_result():
     response_mock = MagicMock()
     stream_mock = MagicMock()
     stream_mock.__aenter__ = AsyncMock(return_value=response_mock)
-    client_stream_mock = MagicMock()
+    client_stream_mock = MagicMock(aclose=AsyncMock())
     client_stream_mock.stream = MagicMock(return_value=stream_mock)
     httpx_client_mock = MagicMock(return_value=client_stream_mock)
 
